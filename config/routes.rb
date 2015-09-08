@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'users/edit'
+
+  get 'users/show'
+
   get 'categories/index'
 
   get 'categories/new'
