@@ -23,12 +23,12 @@
             <div class="inner">
               <h3 class="masthead-brand">Grocerize</h3>
               <nav class="nav nav-masthead">
-                <%= link_to "Home", 'home', class: "nav-link active" %>
                 <% if current_user %>
-                  <%= current_user.username %>
-                  <%= link_to "Logout", '/logout', class:"nav-link" %>
+                  <%= current_user.username %> &nbsp;&nbsp;
+                  <%= link_to "Logout", '/logout', class: "nav-link" %>
                 <% else %>
-                  <%= link_to "Login", '/login', class:"nav-link" %>
+                  <%= link_to "Home", 'home', class: "nav-link active" %> &nbsp;&nbsp;
+                  <%= link_to "Login", '/login', class:"nav-link" %> &nbsp;&nbsp;
                   <%= link_to "Signup", '/signup', class:"nav-link" %>
                 <% end %>
               </nav>

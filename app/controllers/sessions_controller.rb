@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = User.find_by(params[:id])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to '/'
+      redirect_to '/purchases'
     else
       redirect_to '/login'
     end
@@ -14,6 +14,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to '/login'
+    redirect_to '/home'
   end
 end

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :users
   get '/home' => 'home#index'
-
+  get '/purchases' => 'purchases#index'
   root 'home#index'
 
   get '/login' => 'sessions#new'
