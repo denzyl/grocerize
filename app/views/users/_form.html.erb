@@ -1,13 +1,6 @@
-<div class="well">
-  <%= form_for @user do |f| %>
-  <div class="control-group">
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-  </div>
-  <div class="control-group">
-    <%= f.label :password_digest %>
-    <%= f.password_field :password %>
-  </div>
-  <%= f.submit (@user.new_record? ? "Register" : "Update Profile"), class: 'btn btn-success' %>
+<%= form_for @user, html: {class: "form-signin"} do |f| %>
+
+  <%= f.text_field :username, placeholder: 'Username', class: 'form-control' %>
+  <%= f.password_field :password, placeholder: 'Password', class: 'form-control' %>
+  <%= submit_tag "Submit", class:"btn btn-lg btn-primary btn-block", type:"submit" %>
   <% end %>
-</div>
