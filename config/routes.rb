@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :users
   resources :purchases
+  resources :items
 
   get '/home' => 'home#index'
   get '/purchases' => 'purchases#index'
